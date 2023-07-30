@@ -8,44 +8,48 @@
     <title>Dice Tower Dice Roller</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main>
+    <main class="container">
         <h1>Dice Roller</h1>
+	<div class="diceContainer">
 
-	<label for="numDice">Number of Dice:</label>
-	<input type="number" id="numDice" name="numDice" value="1" min="1">
+		<input type="number" id="numDice" name="numDice" value="1" min="1">
 
-	<label for="numSides">Number of sides:</label>
 
-	<select name="numSides" id="numSides">
-	    <option value="2">d2</option>
-	    <option value="3">d3</option>
-	    <option value="4">d4</option>
-	    <option value="6">d6</option>
-	    <option value="8">d8</option>
-	    <option value="10">d10</option>
-	    <option value="12">d12</option>
-	    <option value="20">d20</option>
-	    <option value="100">d100</option>
-	</select>
-	
-	<label for="addSubtract">Add or Subtract:</label>
+		<select name="numSides" id="numSides">
+		<option value="2">d2</option>
+		<option value="3">d3</option>
+		<option value="4">d4</option>
+		<option value="6">d6</option>
+		<option value="8">d8</option>
+		<option value="10">d10</option>
+		<option value="12">d12</option>
+		<option value="20" selected>d20</option>
+		<option value="100">d100</option>
+		</select>
+		
 
-	<select name="addSubtract" id="addSubtract">
-	    <option value="+">+</option>
-	    <option value="-">-</option>
+		<select name="addSubtract" id="addSubtract">
+		<option value="+">+</option>
+		<option value="-">-</option>
 
-	</select>
+		</select>
 
-	<label for="modifier">Modifier:</label>
-	<input type="number" id="modifier" name="modifier" value="0" > 
+		<label for="modifier">Mod:</label>
+		<input type="number" id="modifier" name="modifier" value="0" min="0"> 
 
-	<button type="button" onclick="rollDice()">Roll</button>  
-
-	<label for="diceLog">Dice Roll Log:</label>
-	<button type="button" onclick="clearLog()">Clear Log</button> 
-	<ol name="diceLog" id="diceLog"></ol>
+		<button type="button" onclick="rollDice()">Roll</button>  
+		<p id="result">Result:</p>
+	</div>
+	<div class="logContainer">
+		<label for="diceLog">Dice Roll Log:</label>
+		<button type="button" onclick="clearLog()">Clear Log</button> 
+		<ol name="diceLog" id="diceLog"></ol>
+	</div>
     </main>
 	<script src="index.js"></script>
   </body>

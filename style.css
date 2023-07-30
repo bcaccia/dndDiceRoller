@@ -1,0 +1,77 @@
+/*
+1. Create a layout using CSS (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+2. Either set a background image/gradient/or color
+3. Set a font
+4. Create some div borders to separate sections of the interface
+5. Remove numbering from our ordered list
+6. Create a styled button
+7. Whatever crazy stuff you want to do (fade in animations?)
+*/
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+      }
+
+body {
+	font-family: 'Lumanosimo', cursive;
+	background-image: url(bg.jpg);
+	color: white;
+}
+
+h1 {
+	text-align: center;
+	color: red;
+	-webkit-text-stroke: 1px white;
+}
+
+div {
+	margin: 30px;
+}
+
+input {
+	width: 45px;
+}
+
+li {
+	list-style-type: none;
+	animation: fadeIn 0.5s;
+}
+
+button {
+	border-radius: 4px;
+	width: 100px;
+	color: white;
+	background-color: black;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.diceContainer {
+	background-color: rgba(255, 255, 255, .15);
+	backdrop-filter: blur(5px);
+	border-style: solid;
+	border-color: red;
+	border-width: 1px 1px 1px 1px;
+	border-radius: 10px;
+}
+
+.logContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-style: solid;
+	border-color: red;
+	border-width: 1px 1px 1px 1px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, .15);
+	backdrop-filter: blur(5px);
+}
+
+#diceLog {
+	text-align: center;
+}

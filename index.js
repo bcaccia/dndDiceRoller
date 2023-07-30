@@ -45,8 +45,10 @@ function getRandNumber (numDice, numSides) {
 // this results in the most recent rolls at the top of the list, descending to oldest
 function addToLog (rollTotals, rollSummary) {
 	const diceLog = document.querySelector("#diceLog")
+	const result = document.querySelector("#result")
 	const newEntry = document.createElement("li")
 	newEntry.textContent = rollSummary + " Total=" + rollTotals
+	result.textContent = "Result: " + rollTotals
 	diceLog.prepend(newEntry);
 }
 
@@ -55,6 +57,8 @@ function clearLog () {
 	// Using Option 2 A from here that uses a loop to clear all children of a
 	// parent node
 	const diceLog = document.querySelector("#diceLog")
+	const result = document.querySelector("#result")
+	result.textContent = "Result: "
 	while (diceLog.firstChild) {
 		diceLog.removeChild(diceLog.lastChild);
 	}
