@@ -3,10 +3,10 @@ function rollDice () {
 	// retrieve values for all user selection/input fields
 	// Note that by default they come as strings so we have to use
 	// parseInt to make them numbers
-	const numDice = document.querySelector("#numDice").value;
-	const numSides = document.querySelector("#numSides").value;
+	const numDice = parseInt(document.querySelector("#numDice").value);
+	const numSides = parseInt(document.querySelector("#numSides").value);
 	const addSubtract = document.querySelector("#addSubtract").value;
-	const modifier = document.querySelector("#modifier").value;
+	const modifier = parseInt(document.querySelector("#modifier").value);
 
 	// store results of individual dice rolls for display but also
 	// sum together
